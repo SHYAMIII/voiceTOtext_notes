@@ -1,20 +1,16 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ["./app/**/*.{js,ts,jsx,tsx}"],
-    theme: {
-      extend: {
-        colors: {
-          primary: '#FF6B6B',
-          secondary: '#FFD93D',
+  theme: {
+    extend: {
+      animation: {
+        ping: {
+          '0%': { transform: 'scale(0.95)', opacity: '1' },
+          '75%, 100%': { transform: 'scale(1.5)', opacity: '0' },
         },
-        backgroundImage: {
-          'gradient-main': 'linear-gradient(to bottom right, #FF6B6B, #FFD93D)',
-        },
-        fontFamily: {
-          sans: ['Poppins', 'sans-serif'],
-        },
-      },
-    },
-    plugins: [],
-  };
-  
+        bounce: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-6px)' },
+        }
+      }
+    }
+  }
+}
